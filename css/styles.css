@@ -1,0 +1,53 @@
+.wrapper {
+	padding: 100px 0 0 100px;
+}
+
+table {
+	border-collapse: collapse;
+	counter-reset: num;
+	box-shadow: 0 0 50px 40px #b5b5d4;
+	background-color: #cfe2e8;
+}
+
+.table-body td:first-child:before {
+	counter-increment: num;
+	content: counter(num);
+	position: relative;
+	left: 40%;
+}
+
+caption {
+	padding: 0 0 5px 10px;
+	text-align: left;
+	font-size: 20px;
+	color: white;
+}
+
+td {
+	border: 2px solid gray;
+}
+
+thead {
+	background-color: darkgray;
+	text-align: center;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: white;
+}
+
+thead tr {
+	height: 40px;
+}
+
+.num {
+	text-transform: none;
+	width: 50px;
+}
+.table-body td {
+	padding: 0 10px;
+	height: 30px;
+}
+
+.table-body:nth-of-type(2n) {
+	background-color: #d8eab6;
+}

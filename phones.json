@@ -1,0 +1,36 @@
+[{
+    "firstName": "Иван",
+    "lastName": "Иванов",
+    "address": {"country": "Россия", "city": "г.Москва", "street": "ул. Алиева", "building": "2"},
+    "phoneNumber": ["(812) 123-1234", "(812) 321-4321"]
+},
+{
+  "firstName": "Дарт",
+  "lastName": "Вейдер",
+  "address": {"country": "Далекая галактика", "city": "Звезда смерти", "building": "каюта №1(люкс)"},
+  "phoneNumber": ["1000-010-0010(красный)", "1010-011-1001(синий)"]
+},
+{
+  "firstName": "Робинзон",
+  "lastName": "Крузо",
+  "address": {"country": "Тихий океан", "city": "о.Масс-а-Тьерра", "building": "пальмовая хижина"},
+  "phoneNumber": ["...---...", "Mayday Mayday Mayday"]
+},
+{
+  "firstName": "Теодор",
+  "lastName": "Воланд",
+  "address": {"country": "РСФСР", "city": "г.Москва", "street": "ул. Б.Садовая", "building": "10"},
+  "phoneNumber": ["А9-69-96", "Д6-96-69"]
+},
+{
+  "firstName": "Айболит",
+  "lastName": "Чуковский",
+  "address": {"country": "СССР", "city": "г.Москва", "street": "ул. Горького", "building": "6"},
+  "phoneNumber": ["03", "911"]
+},
+{
+  "firstName": "Миша",
+  "lastName": "Олимпийский",
+  "address": {"country": "Россия", "city": "г.Сочи", "street": "Олимпийская деревня", "building": "стадион 'Фишт'"},
+  "phoneNumber": ["(901)2014-2014-2014", "(902)2014-2014-2014"]
+}]

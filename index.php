@@ -2,12 +2,28 @@
     
     $dataList = file_get_contents("phones.json");
 
-    if (json_decode($dataList)) {
-        $decode = json_decode($dataList, true);
+    $decode = json_decode($dataList, true);
+
+    if (json_last_error()) {
+        echo 'Ошибка декодирования файла';
+        exit;
     }
     
     function getAddress($data) {
-        return implode(', ', $data['address']);
+        $list = $data['address'];
+        $address = [];
+        $address['country'] = $list['country'];
+        $address['city'] = $list['city'];
+        $address['street'] = $list['street'];
+        $address['building'] = $list['building'];
+        
+        foreach ($address as $part => $value ) {
+            if (is_null($value)) {
+                unset($address[$part]);
+            }
+        }
+
+        return implode(', ', $address);
     }
 
     function getPhones($data) {        
@@ -41,13 +57,13 @@
 
             <? foreach ($decode as $person) : ?>
             
-            <tr class="table-body">
-                <td></td>
-                <td><?= $person['firstName'] ?></td>
-                <td><?= $person['lastName'] ?></td>
-                <td><?= getAddress($person) ?></td>
-                <td><?= getPhones($person) ?></td>
-            </tr>
+                <tr class="table-body">
+                    <td></td>
+                    <td><?= $person['firstName'] ?></td>
+                    <td><?= $person['lastName'] ?></td>
+                    <td><?= getAddress($person) ?></td>
+                    <td><?= getPhones($person) ?></td>
+                </tr>
 
             <? endforeach ?>
         </table>
